@@ -11,7 +11,7 @@ func main() {
 	port, ok := os.LookupEnv("PORT")
 
 	if !ok {
-		log.Fatalln("$PORT must be set")
+		port = "8080"
 	}
 
 	handler := http.NewServeMux()
